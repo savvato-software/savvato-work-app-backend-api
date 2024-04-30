@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const PropertiesReader = require('properties-reader');
-const prop = PropertiesReader('_environments/application.properties');
+const prop = PropertiesReader('.env');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
