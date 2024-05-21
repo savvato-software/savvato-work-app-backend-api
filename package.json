@@ -4,6 +4,7 @@
   "description": "A network to increase entrepreneurship by allowing people to work on discrete tasks and get paid for them.",
   "main": "app.js",
   "scripts": {
+    "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,5 +14,8 @@
     "express": "^4.19.2",
     "mongoose": "^8.3.3",
     "properties-reader": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
