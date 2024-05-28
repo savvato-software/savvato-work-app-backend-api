@@ -22,7 +22,7 @@ signupRouter.post('/', async(request, response) => {
             const savedUser = await userToRegister.save()
             response.status(201).json(savedUser)
     } catch (error) {
-        console.error(`ERROR : ${error.message}\n`);
+        next(error)
     }
 })
 
