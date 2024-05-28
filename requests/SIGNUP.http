@@ -1,0 +1,13 @@
+####
+# @valid signup
+POST http://localhost:3000/public/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "tester1",
+    "name": "test user1",
+    "password": "f!rE|ntHeH076"
+}
+
+####
+# @invalid signup
