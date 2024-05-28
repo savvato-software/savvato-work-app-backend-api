@@ -1,6 +1,6 @@
 ####
 # @valid signup
-POST http://localhost:3000/public/signup HTTP/1.1
+POST http://localhost:3007/public/signup HTTP/1.1
 content-type: application/json
 
 {
