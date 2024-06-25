@@ -23,7 +23,7 @@ const tokenExtractor = (request, response, next) => {
     next()
 }
 
-// validate user's JWT and authenticate user access
+// validate user's JWT and authenticate user access - to be used in stepsController.js
 const userExtractor = async (request, response, next) => {
     const decodedToken = jwt.verify(request.token, process.env.SECRET)
     if(!decodedToken){
