@@ -25,16 +25,26 @@ loginRouter.post('/', async(request, response) => {
         username: registeredUser.username,
         id: registeredUser.id
     }
-    // expires in 15 minutes
+    // expires in 60 minutes
     const token = jwt.sign(
         userToAuthenticate, 
         config.SECRET, {
-        expiresIn: 15*60    
+        expiresIn: 60 * 60    
     })
+    
+    // use httpOnly cookie to wrap JWT
+    response.cookie('auth_token', token, {
+        httpOnly: true,
+        secure: false, // true if https
+        maxAge: 60 * 60 * 1000, // match token expiresIn
+        sameSite: 'strict' // based on cross-site request needs
+    })
+
     response
     .status(200)
-    .send({ token, username: registeredUser.username, name: registeredUser.name })
+    .send({ username: registeredUser.username, name: registeredUser.name })
 })
 
 
+// export to app
 module.exports = loginRouter
