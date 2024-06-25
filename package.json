@@ -2,7 +2,7 @@
   "name": "work-app-backend-api",
   "version": "1.0.0",
   "description": "A network to increase entrepreneurship by allowing people to work on discrete tasks and get paid for them.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
